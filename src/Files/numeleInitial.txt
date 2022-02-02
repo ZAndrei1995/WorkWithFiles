@@ -1,5 +1,5 @@
 teza 30
-ababei ion  7,7,8,4, 9t
-baciu cristian 6,7,9,9t
-bolojan stefana 10,10,7,8t
-chira clara 7,9,7, 10t
+ababei ion ,7,7,8,4, 9teza
+baciu cristian ,6,7,9,9teza
+bolojan stefana ,10,10,7,8teza
+chira clara ,7,9,7, 10teza

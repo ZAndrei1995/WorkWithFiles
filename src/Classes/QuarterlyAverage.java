@@ -26,6 +26,7 @@ public class QuarterlyAverage {
         }
 
         System.out.println(infoAboutStudents);
+        System.out.println();
         workWithData();
 
     }
@@ -35,27 +36,28 @@ public class QuarterlyAverage {
         for ( String counter : infoAboutStudents ) {
             double average = 0 ;
             int gradePointsCounter = 0 ;
-            StringTokenizer myString = new StringTokenizer(counter) ;
+            String name = "" ;
+            double notaTeza = 0 ;
+            StringTokenizer myString = new StringTokenizer(counter,",") ;
             while ( myString.hasMoreTokens() ) {
-                String getValue = myString.nextToken(",!@#$%^&*()_+=-]['/ ") ;
-                if ( isNumberic(getValue) ) {
-                    int transform = Integer.parseInt(getValue) ;
-                    gradePointsCounter++ ;
-                    average += transform ;
+                String getValue = myString.nextToken() ;
+
+                if ( getValue.endsWith("teza")) {
+                    notaTeza = Integer.parseInt(getValue.substring(0, getValue.lastIndexOf("teza")).trim());
+                }else {
+                    try {
+                        int transform = Integer.parseInt(getValue);
+                        gradePointsCounter++;
+                        average += transform;
+                    } catch (NumberFormatException e) {
+                        name = getValue;
+                    }
                 }
 
             }
-            System.out.println(average/gradePointsCounter);
+            System.out.println(name + " " + ((average/gradePointsCounter)*3+notaTeza)/4);
         }
 
-    }
-
-    private boolean isNumberic ( String myString ) {
-        return myString != null && myString.matches("[0-9]") ;
-    }
-
-    private boolean containsALetter ( String myString ) {
-        return myString != null && myString.matches("[0-9]{0,2}t") ;
     }
 
 
