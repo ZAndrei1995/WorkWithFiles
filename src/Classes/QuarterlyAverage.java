@@ -51,11 +51,11 @@ public class QuarterlyAverage {
     }
 
     private boolean isNumberic ( String myString ) {
-        return myString != null && myString.matches("[0-9]+") ;
+        return myString != null && myString.matches("[0-9]") ;
     }
 
     private boolean containsALetter ( String myString ) {
-        return myString != null && myString.matches("[0-9]{0,2}t+") ;
+        return myString != null && myString.matches("[0-9]{0,2}t") ;
     }
 
 
