@@ -38,10 +38,12 @@ public class QuarterlyAverage {
             double notaTeza = 0 ;
             StringTokenizer myString = new StringTokenizer(counter,",") ;
             double finalGrade ;
-            while ( myString.hasMoreTokens() ) {
+            int countNotaTeza = 0 ;
+            while ( myString.hasMoreTokens() && countNotaTeza < 1) {
                 String getValue = myString.nextToken() ;
                 if ( getValue.endsWith("teza")) {
                     notaTeza = Integer.parseInt(getValue.substring(0, getValue.lastIndexOf("teza")).trim());
+                    countNotaTeza ++ ;
                 }else {
                     try {
                         int transform = Integer.parseInt(getValue);
@@ -51,7 +53,6 @@ public class QuarterlyAverage {
                         name = getValue;
                     }
                 }
-
             }
             finalGrade = ((average/gradePointsCounter)*3+notaTeza)/4;
             if ( addContentInFile(name, finalGrade)) {
