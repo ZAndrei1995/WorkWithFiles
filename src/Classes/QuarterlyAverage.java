@@ -32,13 +32,15 @@ public class QuarterlyAverage {
     public void workWithData ( ) {
 
         for ( String counter : infoAboutStudents ) {
-            double average = 0 ;
-            int gradePointsCounter = 0 ;
-            String name = "" ;
-            double notaTeza = 0 ;
-            StringTokenizer myString = new StringTokenizer(counter,",") ;
-            double finalGrade ;
-            int countNotaTeza = 0 ;
+
+            int countNotaTeza = 0;
+            int gradePointsCounter = 0;
+            double average = 0;
+            double notaTeza = 0;
+            double finalGrade;
+            String name = "";
+            StringTokenizer myString = new StringTokenizer(counter, ",");
+
             while ( myString.hasMoreTokens() && countNotaTeza < 1) {
                 String getValue = myString.nextToken() ;
                 if ( getValue.endsWith("teza")) {
