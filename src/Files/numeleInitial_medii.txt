@@ -1,0 +1,12 @@
+Student name: ababei ion 
+Final grade: 7.125
+
+Student name: baciu cristian 
+Final grade: 7.75
+
+Student name: bolojan stefana 
+Final grade: 8.75
+
+Student name: chira clara 
+Final grade: 8.25
+
